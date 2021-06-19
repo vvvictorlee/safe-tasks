@@ -114,8 +114,10 @@ task("propose-multi", "Create a Safe tx proposal json file")
 
 task("show-proposal", "Shows details for a Safe transaction")
     .addPositionalParam("hash", "Hash of Safe transaction to display", undefined, types.string)
+    .addPositionalParam("address", "Hash of Safe transaction to display", undefined, types.string)
     .setAction(async (taskArgs, hre) => {
         const proposal: SafeTxProposal = await readFromCliCache(proposalFile(taskArgs.hash))
+console.log("==taskArgs.address===",taskArgs.address)
         const safe = await safeSingleton(hre, taskArgs.address)
         const safeAddress = await safe.resolvedAddress
         console.log(`Using Safe at ${safeAddress}@${proposal.chainId}`)

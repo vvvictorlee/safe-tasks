@@ -42,12 +42,22 @@ This will deploy a Safe that uses the first imported account as an owner and set
 yarn safe create
 ```
 
+```bash
+yarn safe create --factory 0xE89ce3bcD35bA068A9F9d906896D3d03Ad5C30EC --singleton 0xb4A7C7da1631CF60A2Cf23ABc86986f99a1A7f70 --fallback 0xe16bA5bF81E5BB113e4752E4fdC20351d796fB24 --signers 0x598FeaB9ff6A090a7fAA9dF0F3B4df3F0c8D35FC,0xc6AF1E96Cb0Fe864ccfC1d1Dcf4239A233A9B72a,0x4a79c58CCf9d80353c02357F26D6f7b99fA9991e  --threshold 2
+```
+
+
+
 ### Safe Info
 Displays information about a Safe
 
 #### Usage
 ```bash
 yarn safe info <address>
+```
+
+```bash
+yarn safe info 0xc2d76d0b31A7FfD239Bf7d75bF4fB2B5307361d4    0xec6C0EE6CFCb0C199e80fe8450c00D1C4f513395  
 ```
 
 ### Propose Safe Transaction
@@ -64,6 +74,11 @@ This will create a transaction based on the sample tx input json that mints some
 yarn safe propose-multi <address> tx_input.sample.json
 ```
 
+```bash
+yarn safe propose-multi 0xc2d76d0b31A7FfD239Bf7d75bF4fB2B5307361d4 tx_input.approve.json
+```
+
+
 ### Show Proposal
 Shows the information of the proposal. 
 Note: This requires the proposal file created before for that Safe transaction in the `cli_cache`.
@@ -72,7 +87,9 @@ Note: This requires the proposal file created before for that Safe transaction i
 ```bash
 yarn safe show-proposal <safeTxHash>
 ```
-
+```bash
+yarn safe show-proposal 0x2ef5b3e67583d2000ca6cfe371f7cc5d8aaaeec1376d7ba57dde793bc73ea954
+```
 ### Sign Proposal
 Signs a proposal with the imported account
 Note: This requires the proposal file created before for that Safe transaction in the `cli_cache`.
@@ -81,7 +98,7 @@ Note: This requires the proposal file created before for that Safe transaction i
 ```bash
 yarn safe sign-proposal <safeTxHash>
 ```
-
+yarn safe sign-proposal 0x2ef5b3e67583d2000ca6cfe371f7cc5d8aaaeec1376d7ba57dde793bc73ea954
 ### Submit Proposal
 Submits a proposal with the imported account
 Note: This requires the proposal file created before for that Safe transaction in the `cli_cache`.
@@ -90,7 +107,9 @@ Note: This requires the proposal file created before for that Safe transaction i
 ```bash
 yarn safe submit-proposal <safeTxHash>
 ```
-
+```bash
+yarn safe submit-proposal 0x2ef5b3e67583d2000ca6cfe371f7cc5d8aaaeec1376d7ba57dde793bc73ea954
+```
 ### Show Transaction History
 Displays the transaction history of a Safe based on events
 
@@ -98,6 +117,10 @@ Displays the transaction history of a Safe based on events
 ```bash
 yarn safe history <address>
 ```
+```bash
+yarn safe history 0xc2d76d0b31A7FfD239Bf7d75bF4fB2B5307361d4
+```
+
 
 Security and Liability
 ----------------------

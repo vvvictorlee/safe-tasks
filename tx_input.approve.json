@@ -1,0 +1,9 @@
+[
+    {
+        "to": "0x8970F39632E01C59e4d104AbDD53FB39779aad67",
+        "value": "0",
+        "method": "approve(address,uint256)",
+        "params": ["0x38fF2398624d9Df2e782E26cDCc7640995030032", "1000000000000000"],
+        "operation": 0
+    }
+]

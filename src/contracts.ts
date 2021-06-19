@@ -1,5 +1,5 @@
 import { Contract } from "@ethersproject/contracts";
-import { getCompatibilityFallbackHandlerDeployment, getMultiSendDeployment, getProxyFactoryDeployment, getSafeSingletonDeployment, getSafeL2SingletonDeployment, SingletonDeployment } from "@gnosis.pm/safe-deployments";
+import { getCompatibilityFallbackHandlerDeployment, getMultiSendDeployment, getProxyFactoryDeployment, getSafeSingletonDeployment, getSafeL2SingletonDeployment, SingletonDeployment } from "../safe-deployments/src/index";
 import { HardhatRuntimeEnvironment as HRE } from "hardhat/types";
 
 export const contractFactory = (hre: HRE, contractName: string) => hre.ethers.getContractFactory(contractName);
