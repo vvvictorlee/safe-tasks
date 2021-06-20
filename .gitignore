@@ -6,6 +6,7 @@ contracts/
 .openzeppelin/.session
 env/
 .env
+.env.test
 bin/
 dist/
 deployments/
